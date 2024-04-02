@@ -1,0 +1,86 @@
+body, h1, input{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  .box {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .box h1 {
+    margin-bottom: 20px;
+  }
+  
+  .box input[type="text"],
+  .box input[type="password"],
+  .box input[type="submit"],
+  
+  .box button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .box input[type="submit"],
+  .box button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .box input[type="submit"]:hover,
+  .box button:hover {
+    background-color: #0056b3;
+  }
+  
+  .box p {
+    margin-top: 20px;
+  }
+  
+  .box a {
+    text-decoration: none;
+  }
+  
+  .box a button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .box a button:hover {
+    text-decoration: underline;
+  }
+  button{
+    background-color: #007bff;
+    
+    color: white;
+    cursor: pointer;
+margin-left: 35%;
+
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    
+  }
+  p{
+    text-align: center;
+   
+  }
