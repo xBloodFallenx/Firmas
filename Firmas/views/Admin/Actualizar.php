@@ -59,12 +59,11 @@
                 <br /><br />
 
                 <p>Seleccione El Nuevo Cargo</p>
-                <select name="idcargo" >
-                    <option disabled selected value=""></option>
-                    <option value="2" <?php if($usuario->idcargo == 2) echo 'selected'; ?>>Administrador</option>
-                    <option value="1" <?php if($usuario->idcargo == 1) echo 'selected'; ?>>Gerente</option>
-                    <option value="3" <?php if($usuario->idcargo == 3) echo 'selected'; ?>>Vendedor</option>
-                        
+                 <select name="idcargo" id="idcargo">
+                    <option value=""></option>
+                    <?php foreach ( $this->model->obtenerCargos() as $r) : ?>
+                    <option value="<?php echo $r->idcargo; ?>"> <?php echo $r->Nombre_Cargo; ?>  </option>
+                    <?php endforeach; ?>
                 </select>
                 <br /><br />
         <button type="submit">Actualizar Usuario</button>
