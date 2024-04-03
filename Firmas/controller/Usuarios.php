@@ -49,6 +49,12 @@ require_once "views/module/footer.php";
     require_once "views/module/footer.php";
   }
 
+  public function vista5(){
+    require_once "views/module/header.php";
+      require_once "views\Admin\Registrouser_view.php";
+      require_once "views/module/footer.php";
+  }
+
   
   
   
@@ -127,6 +133,33 @@ require_once "views/module/footer.php";
       header("Location: ?c=Usuarios&a=ListarUsuarios");
   }
   
+
+
+public function RegistrarUser(){
+  $alm = new Usuario();
+  $alm->idusuario = $_REQUEST['idusuario'];
+  $alm->Primer_Nombre = $_REQUEST['Primer_Nombre'];
+  $alm->Segundo_Nombre = $_REQUEST['Segundo_Nombre'];
+  $alm->Primer_Apellido = $_REQUEST['Primer_Apellido'];
+  $alm->Segundo_Apellido = $_REQUEST['Segundo_Apellido'];
+  $alm->direccion = $_REQUEST['direccion'];
+  $alm->Telefono = $_REQUEST['Telefono'];
+  $alm->Celular = $_REQUEST['Celular'];
+  $alm->Ext = $_REQUEST['Ext'];
+  $alm->Indicativo = $_REQUEST['Indicativo'];
+  $alm->idciudad = $_REQUEST['idciudad'];
+  $alm->idcargo = $_REQUEST['idcargo'];
+  $alm->Password = $_REQUEST['Password'];
+  $alm->Usuario = $_REQUEST['Usuario'];
+  
+  $this->model->RegisUser($alm);
+
+
+
+  header('Location:?c=Usuarios&a=ListarUsuarios');
+}
+
+
   
   
   public function Registrar()

@@ -14,6 +14,7 @@
 <ul class="menu"> <li><a href="?c=Usuarios&a=vista2">Crear Firma</a></li>
 <br>
 <ul class="menu"> <li><a href="?c=Cargos&a=vistacargo">Agregar Cargos</a></li>
+<ul class="menu"> <li><a href="?c=Usuarios&a=vista5">Crear Usuarios</a></li>
     </div>
 
 </main> 

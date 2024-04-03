@@ -141,6 +141,57 @@ $this->pdo->prepare($sql)
   }}
 
 
+  //registro Uusuarios Administrator
+
+  public function RegisUser(Usuario $data){
+    try {
+      $sql = "INSERT INTO usuario (
+                Primer_Nombre,
+                Segundo_Nombre,
+                Primer_Apellido,
+                Segundo_Apellido,
+                direccion,
+                Telefono,
+                Celular,
+                Ext,
+                Indicativo,
+                idciudad,
+                idcargo,
+                Usuario,
+                Password
+              )
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+      $this->pdo->prepare($sql)
+        ->execute(
+          array(
+            $data->Primer_Nombre,
+            $data->Segundo_Nombre,
+            $data->Primer_Apellido,
+            $data->Segundo_Apellido,
+            $data->direccion,
+            $data->Telefono,
+            $data->Celular,
+            $data->Ext,
+            $data->Indicativo,
+            $data->idciudad,
+            $data->idcargo,
+            $data->Usuario,
+            $data->Password
+          )
+        );
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+
+
+
+
+
 
   public function UserCreate(Usuario $data)
   {
